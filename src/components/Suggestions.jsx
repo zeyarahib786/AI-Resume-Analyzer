@@ -9,9 +9,11 @@ export default function Suggestions({ tips }) {
         {tips.length === 0 ? (
           <p className="text-gray-500">Upload resume to get suggestions</p>
         ) : (
-          <ul className="list-disc ms-4">
+          <ul className="list-disc ps-4">
             {tips.map((tip, index) => (
-              <li key={index}>{tip}</li>
+              <li key={index} className="mb-2 text-gary-700">
+                🚀 {tip}
+              </li>
             ))}
           </ul>
         )}

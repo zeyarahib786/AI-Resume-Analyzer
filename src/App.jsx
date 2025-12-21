@@ -3,7 +3,6 @@ import Dashboard from "./pages/Dashboard";
 import { extractText } from "./utils/pdfReader";
 import { extractSkills, calculateMatch } from "./utils/skillMatcher";
 import { jobRoles } from "./data/jobRoles";
-import { getSuggestions } from "./services/suggestions";
 // import "./App.css";
 
 function App() {
@@ -24,23 +23,31 @@ function App() {
   useEffect(() => {
     if (!resumeText) return;
 
-    // 1️⃣ Resume-based skill extraction (LOCAL)
+    // Resume-based skill extraction (LOCAL)
     const detectedSkills = extractSkills(resumeText);
     setSkills(detectedSkills);
 
-    // 2️⃣ Missing skills (LOCAL)
+    // Missing skills (LOCAL)
     const jobSkills = jobRoles["Frontend Developer"];
     const missing = jobSkills.filter(
       (skill) => !detectedSkills.includes(skill)
     );
     setMissing(missing);
 
-    // 3️⃣ Match score (LOCAL)
+    // Match score (LOCAL)
     const score = calculateMatch(detectedSkills, jobSkills);
     setScore(score);
 
-    // 4️⃣ Suggestions (AI later, local now)
-    getSuggestions(missing).then(setTips);
+    // Suggestions (AI later, local now)
+    if (!missing.length) {
+      setTips(["Your resume already matches the job role well."]);
+    } else {
+      setTips(
+        missing.map(
+          (skill) => `Improve your ${skill} by building 1–2 real-world projects`
+        )
+      );
+    }
   }, [resumeText]);
 
   return (
