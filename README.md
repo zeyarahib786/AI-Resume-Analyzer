@@ -25,12 +25,12 @@ Upload your resume (PDF), and the app will:
 React  
 Vite  
 JavaScript (ES6+)  
-PDF parsing
-Tailwind / Bootstrap / Material UI (as used in UI)  
+PDF parsing  
+Tailwind / Bootstrap / Material UI  
 Vercel (deployment)
 
 ## 🚀 Live Demo
-https://your-project-name.vercel.app
+https://ai-resume-analyzer-snowy.vercel.app/
 
 ## Installation & Setup
 ### Clone repo:
