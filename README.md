@@ -1,16 +1,51 @@
-# React + Vite
+# AI Resume Analyzer (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and fast Resume Analyzer built using React + Vite.
 
-Currently, two official plugins are available:
+Upload your resume (PDF), and the app will:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✔ extract skills  
+✔ compare them with job-role requirements  
+✔ calculate a match score  
+✔ show missing skills  
+✔ give improvement suggestions — all on the frontend.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+📂 Upload resume (PDF)  
+🔍 Extract key skills  
+📊 Job-role match score    
+❗ Missing skill detection  
+💡 Improvement suggestions   
+⚡ 100% frontend — no server needed  
+🌐 Deployed on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+React  
+Vite  
+JavaScript (ES6+)  
+PDF parsing
+Tailwind / Bootstrap / Material UI (as used in UI)  
+Vercel (deployment)
+
+## 🚀 Live Demo
+https://your-project-name.vercel.app
+
+## Installation & Setup
+### Clone repo:
+git clone https://github.com/zeyarahib786/AI-Resume-Analyzer.git
+
+### Open folder:
+cd YOUR-REPO-NAME
+
+### Install dependencies:
+npm install
+
+### Start development server:
+npm run dev
+
+### Runs at:
+http://localhost:5173
+
+
